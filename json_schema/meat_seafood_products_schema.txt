@@ -1,0 +1,74 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "array",
+    "items": [
+        {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "inStock": {
+                    "type": "boolean"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "inStock": {
+                    "type": "boolean"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "inStock": {
+                    "type": "boolean"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "inStock": {
+                    "type": "boolean"
+                }
+            }
+        }
+    ]
+}
