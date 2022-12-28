@@ -38,8 +38,8 @@ class TestScenario3:
                 product = get_a_product_by_id(product_id).json()
                 stock_limit = product["current-stock"]
                 r = add_product_to_cart(cart_1_id, product_id, stock_limit)
-                assert_that(r.status_code).is_equal_to(400)
-                assert_that(r.json()['created']).is_equal_to(False)
+                assert_that(r.status_code).is_equal_to(201)
+                assert_that(r.json()['created']).is_equal_to(True)
 
     def test_add_to_cart_products_not_on_stock(self, cart_1_id, products_list):
         for item in products_list:
