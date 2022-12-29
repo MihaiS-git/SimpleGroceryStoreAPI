@@ -1,0 +1,739 @@
+{
+	"info": {
+		"_postman_id": "13b3fae1-969a-4754-8df8-367a64dfa8d0",
+		"name": "Grocery Store API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24706515"
+	},
+	"item": [
+		{
+			"name": "API Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/status",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/products",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Coffee Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/products?category=coffee",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "coffee"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Fresh-Produce Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/products?category=fresh-produce",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "fresh-produce"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Meat-Seafood Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/products?category=meat-seafood",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "meat-seafood"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Candy Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/products?category=candy",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "candy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Dairy Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/products?category=dairy",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "dairy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Bread-Bakery Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/products?category=bread-bakery",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "bread-bakery"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get A Product by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/products/4646",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"products",
+						"4646"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Cart#1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/carts",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Products to Cart#1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 4646,\r\n    \"quantity\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/carts/{{CART#1_ID}}/items",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"carts",
+						"{{CART#1_ID}}",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cart#1 Items",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{API_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/carts/{{CART#1_ID}}/items",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"carts",
+						"{{CART#1_ID}}",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Replace Item in Cart#1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 5477,\r\n    \"quantity\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/carts/{{CART#1_ID}}/items/{{ITEM#1_ID}}",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"carts",
+						"{{CART#1_ID}}",
+						"items",
+						"{{ITEM#1_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify Item Quantity in Cart#4",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{API_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": 5477,  \r\n  \"quantity\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}//carts/:cartId/items/:itemId",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"",
+						"carts",
+						":cartId",
+						"items",
+						":itemId"
+					],
+					"variable": [
+						{
+							"key": "cartId",
+							"value": "{{CART#1_ID}}"
+						},
+						{
+							"key": "itemId",
+							"value": "{{ITEM#1_ID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add No Stock Products to Cart#1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 5851,\r\n    \"quantity\": 20\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/carts/{{CART#1_ID}}/items",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"carts",
+						"{{CART#1_ID}}",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add More Products to Cart#1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 4646\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}//carts/{{CART#1_ID}}/items",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"",
+						"carts",
+						"{{CART#1_ID}}",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an Item in Cart#1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{API_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/carts/{{CART#1_ID}}/items/{{ITEM#1_ID}}",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"carts",
+						"{{CART#1_ID}}",
+						"items",
+						"{{ITEM#1_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register API Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"clientName\": \"JohnDoe\",\r\n   \"clientEmail\": \"JohnDoe011@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api-clients",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api-clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order#1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{API_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cartId\": \"zxC2YLx7pjhtKmUnx8bpP\",\r\n    \"customerName\": \"JohnDoe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/orders",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{API_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/orders?orderId={{ORDER#1_ID}}&orderId={{ORDER#2_ID}}",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "{{ORDER#1_ID}}"
+						},
+						{
+							"key": "orderId",
+							"value": "{{ORDER#2_ID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{API_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"customerName\": \"JohnDoe\"\r\n \"comment\": \"Urgent\"\r\n}"
+				},
+				"url": {
+					"raw": "{{API_URL}}/orders/:orderId",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"orders",
+						":orderId"
+					],
+					"variable": [
+						{
+							"key": "orderId",
+							"value": "{{ORDER#1_ID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a Single Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{API_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/orders/:orderId",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"orders",
+						":orderId"
+					],
+					"query": [
+						{
+							"key": "invoice",
+							"value": "True",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "orderId",
+							"value": "{{ORDER#1_ID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order#2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{API_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cartId\": \"ZPh-j-c7LNjB1ZtMH92km\",\r\n    \"customerName\": \"JohnDoe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/orders",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order#1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{API_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/orders/:orderId",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"orders",
+						":orderId"
+					],
+					"variable": [
+						{
+							"key": "orderId",
+							"value": "{{ORDER#1_ID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{API_TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
