@@ -4,7 +4,8 @@ QA Automation Project - API Tests
 In prezentul proiect, am realizat testarea automata a unui API, specific unei pagini web de ecommerce. 
 API-ul testat se numeste Simple Grocery Store API, are URL-ul de baza
 https://simple-grocery-store-api.glitch.me, iar documentatia completa a acestuia poate fi gasita
-pe Github https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simplegrocery-store-api.md.
+pe Github https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simplegrocery-store-api.md
+sau https://www.postman.com/brooks81/workspace/rest-api-testing/documentation/21662525-4dcfdced-35c1-44c8-97b9-c4a04a0f159b
 
 Proiectul contine 44 de teste, din care 4 teste cad din cauza unor bug-uri descoperite in API.
 Bug-urile constau in dublarea id-ului unor produse si in returnarea de produse diferite in cazul
