@@ -46,7 +46,7 @@ Prerequisites:
 Rulare teste:
 - se creeaza un folder local pentru clonarea proiectului
 - se deschide Git Bash din folderul creat
-- se utilizeaza in Git Bash comanda: git clone https://github.com/MihaiSgit/SimpleGroceryStoreAPI
+- se utilizeaza in Git Bash comanda: git clone https://github.com/MihaiS-git/SimpleGroceryStoreAPI
 - se deschide IDE-ul instalat, iar din terminal se acceseaza adresa folderului in care a fost clonat
 proiectul
 - tot din terminalul IDE-ului, se vor instala toate pachetele necesare specificate in fisierul
